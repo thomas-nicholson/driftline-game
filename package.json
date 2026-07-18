@@ -1,0 +1,26 @@
+{
+  "name": "driftline-mobile-game",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test",
+    "smoke": "node scripts/mobile-smoke.mjs",
+    "check": "npm test && npm run build"
+  },
+  "dependencies": {
+    "@fontsource/bricolage-grotesque": "^5.2.0",
+    "@fontsource/geist": "^5.2.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.61.1",
+    "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

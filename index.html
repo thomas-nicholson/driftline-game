@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0d1526" />
+    <meta name="description" content="Driftline — a fast, one-thumb 3D hovercraft game built for mobile browsers." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+    <title>Driftline — mobile 3D game</title>
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Driftline game">
+      <canvas id="game-canvas" aria-label="3D hovercraft course. Drag left and right to steer." tabindex="0"></canvas>
+
+      <header class="hud" aria-label="Current run">
+        <div class="hud__score">
+          <span class="hud__label">Score</span>
+          <strong id="score" class="hud__value">0000</strong>
+        </div>
+        <div class="hud__energy">
+          <span class="hud__label">Energy</span>
+          <strong id="energy" class="hud__value">0</strong>
+        </div>
+        <button id="sound-button" class="icon-button" type="button" aria-label="Turn sound off" aria-pressed="true">
+          <span aria-hidden="true">SFX</span>
+          <strong id="sound-state" aria-hidden="true">ON</strong>
+        </button>
+      </header>
+
+      <section id="start-screen" class="screen screen--start" aria-labelledby="game-title">
+        <div class="screen__copy">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="overline">One-thumb arcade</p>
+          <h1 id="game-title">Driftline</h1>
+          <p class="screen__lede">Thread the barriers. Catch blue energy. Keep the craft on the line.</p>
+        </div>
+        <div class="screen__actions">
+          <button id="start-button" class="primary-button" type="button">Start run</button>
+          <p class="control-note"><span class="control-glyph" aria-hidden="true">↔</span> Drag anywhere to steer</p>
+        </div>
+      </section>
+
+      <section id="end-screen" class="screen screen--end" aria-labelledby="crash-title" hidden>
+        <div class="screen__copy">
+          <p class="overline">Run over</p>
+          <h2 id="crash-title">Barrier hit</h2>
+          <dl class="results">
+            <div><dt>Score</dt><dd id="final-score">0</dd></div>
+            <div><dt>Best</dt><dd id="best-score">0</dd></div>
+          </dl>
+        </div>
+        <button id="restart-button" class="primary-button" type="button">Run again</button>
+      </section>
+
+      <section id="pause-screen" class="screen screen--pause" aria-labelledby="pause-title" hidden>
+        <div class="screen__copy">
+          <p class="overline">Run held</p>
+          <h2 id="pause-title">Paused</h2>
+        </div>
+        <button id="resume-button" class="primary-button" type="button">Resume run</button>
+      </section>
+
+      <div id="steer-hint" class="steer-hint" aria-hidden="true">Drag to steer</div>
+      <p id="live-status" class="visually-hidden" aria-live="polite">Ready to start.</p>
+      <noscript><p class="fatal-message">Driftline needs JavaScript enabled to run.</p></noscript>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
