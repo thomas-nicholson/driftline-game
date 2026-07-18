@@ -4,7 +4,7 @@ A lightweight Three.js arcade game designed for one-thumb play in a mobile brows
 
 ## Play online
 
-**https://thomas-nicholson.github.io/driftline-game/**
+**https://teejay.dev/driftline-game/**
 
 For the best mobile experience, open it in Safari or Chrome and rotate the phone however you prefer.
 
