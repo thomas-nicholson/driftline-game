@@ -33,17 +33,27 @@ const ui = {
   lede: document.querySelector('.screen__lede'),
 };
 
+function readCssColour(tokenName) {
+  const context = document.createElement('canvas').getContext('2d', { willReadFrequently: true });
+  context.canvas.width = 1;
+  context.canvas.height = 1;
+  context.fillStyle = getComputedStyle(document.documentElement).getPropertyValue(tokenName).trim();
+  context.fillRect(0, 0, 1, 1);
+  const [red, green, blue] = context.getImageData(0, 0, 1, 1).data;
+  return (red << 16) | (green << 8) | blue;
+}
+
 const colours = {
-  sky: 0x0d1526,
-  fog: 0x111c31,
-  ground: 0x17253a,
-  groundEdge: 0x30465e,
-  marker: 0x58758d,
-  accent: 0xf27b5f,
-  energy: 0x65d4e8,
-  ink: 0xeef0e8,
-  hazard: 0xdc5964,
-  shadow: 0x07101f,
+  sky: readCssColour('--color-paper'),
+  fog: readCssColour('--color-paper-raised'),
+  ground: readCssColour('--color-paper-soft'),
+  groundEdge: readCssColour('--color-ground-edge'),
+  marker: readCssColour('--color-marker'),
+  accent: readCssColour('--color-accent'),
+  energy: readCssColour('--color-energy'),
+  ink: readCssColour('--color-ink'),
+  hazard: readCssColour('--color-error'),
+  shadow: readCssColour('--color-shadow'),
 };
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

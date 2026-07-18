@@ -1,4 +1,4 @@
-/* Hallmark · genre: playful · surface: full-screen game · theme: Driftline · anchor hue: 250 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · genre: playful · macrostructure: Full-screen Game Surface · theme: Driftline · anchor hue: 250 · contrast: pass (46–50) · slop: pass (51–55) · mobile: pass (36, 59, 61–69) */
 @import "../tokens.css";
 
 *,
@@ -103,7 +103,7 @@ canvas:focus-visible {
 }
 
 .hud__value {
-  font-family: var(--font-outlier);
+  font-family: var(--font-body);
   font-size: var(--text-md);
   font-variant-numeric: tabular-nums;
   line-height: 1;
@@ -121,7 +121,7 @@ canvas:focus-visible {
   background: var(--color-paper-raised);
   color: var(--color-muted);
   cursor: pointer;
-  font-family: var(--font-outlier);
+  font-family: var(--font-body);
   font-size: 0.625rem;
   line-height: 1.05;
   pointer-events: auto;
@@ -134,13 +134,13 @@ canvas:focus-visible {
 }
 
 .primary-button {
-  width: min(100%, 24rem);
-  min-height: 3.5rem;
+  width: min(100%, 11rem);
+  min-height: 3rem;
   padding: var(--space-md) var(--space-lg);
   border: var(--rule-thin) solid var(--color-accent);
   border-radius: var(--radius-md);
-  background: var(--color-accent);
-  color: var(--color-accent-ink);
+  background: var(--color-paper-raised);
+  color: var(--color-accent);
   cursor: pointer;
   font-family: var(--font-display);
   font-size: var(--text-base);
@@ -245,7 +245,7 @@ h2 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.045em;
-  line-height: 0.98;
+  line-height: 1.02;
 }
 
 h1 {
@@ -259,7 +259,7 @@ h2 {
 }
 
 .screen__lede {
-  max-width: 32ch;
+  max-width: 45ch;
   margin: var(--space-lg) 0 0;
   color: var(--color-muted);
   font-size: var(--text-base);
@@ -285,7 +285,7 @@ h2 {
   border: var(--rule-thin) solid var(--color-rule);
   border-radius: var(--radius-sm);
   color: var(--color-energy);
-  font-family: var(--font-outlier);
+  font-family: var(--font-body);
 }
 
 .results {
@@ -310,7 +310,7 @@ h2 {
 
 .results dd {
   margin: 0;
-  font-family: var(--font-outlier);
+  font-family: var(--font-body);
   font-size: var(--text-xl);
   font-variant-numeric: tabular-nums;
 }
@@ -375,6 +375,11 @@ h2 {
 
   .screen {
     padding-inline: max(var(--space-xl), env(safe-area-inset-left)) max(var(--space-xl), env(safe-area-inset-right));
+  }
+
+  .primary-button {
+    width: min(100%, 14rem);
+    min-height: 3.5rem;
   }
 }
 

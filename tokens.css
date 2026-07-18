@@ -3,7 +3,10 @@
   --color-paper: oklch(16% 0.025 252);
   --color-paper-raised: oklch(21% 0.032 252);
   --color-paper-soft: oklch(25% 0.035 252);
-  --color-rule: oklch(42% 0.035 252);
+  --color-ground-edge: oklch(38% 0.05 252);
+  --color-marker: oklch(55% 0.05 240);
+  --color-shadow: oklch(10% 0.02 252);
+  --color-rule: oklch(50% 0.035 252);
   --color-muted: oklch(76% 0.025 252);
   --color-ink: oklch(95% 0.014 82);
   --color-accent: oklch(71% 0.16 33);
@@ -17,7 +20,6 @@
 
   --font-display: "Bricolage Grotesque", "Avenir Next", sans-serif;
   --font-body: "Geist", "Avenir Next", sans-serif;
-  --font-outlier: ui-monospace, "SFMono-Regular", monospace;
 
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
